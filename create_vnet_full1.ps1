@@ -35,6 +35,7 @@ $subnet2_address = "10.0.1.64/26"
 $subnet2_name = "subnet2"
 $subnet2 = Add-AzVirtualNetworkSubnetConfig -Name $subnet2_name -VirtualNetwork $vnet -AddressPrefix $subnet2_address
 Set-AzVirtualNetwork -VirtualNetwork $vnet
+$vnet = Get-AzVirtualNetwork -ResourceGroupName $rg -Name $vnet_name
 
 $nic1_name = "vnettestnic1"
 $nic1_ipconfig_name = "ipconfig1"
